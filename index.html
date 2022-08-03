@@ -10,13 +10,39 @@
   </head>
   <body>
     <div class="wrapper">
+      <p class="text-choosing-server header"></p>
       <div class="input-part">
         <input type="text" class="getData" /><button class="bt-send-data">
           Send data
         </button>
-        <a href="#" onclick="location.reload(); return false;" class="reset-page">
+
+        <a
+          href="#"
+          onclick="location.reload(); return false;"
+          class="reset-page"
+        >
           Reset
         </a>
+        <div class="div-choose-type">
+          <label
+            ><input
+              class="proxy"
+              type="radio"
+              name="choose"
+              value="You can do only 50 requests per hour"
+              onchange="choosingServer(this)"
+            />Use proxy server</label
+          >
+          <label
+            ><input
+              class="not-proxy"
+              type="radio"
+              name="choose"
+              value="You can do only 15 for one time"
+              onchange="choosingServer(this)"
+            />Don`t use proxy server</label
+          >
+        </div>
         <p class="textValidation"></p>
       </div>
     </div>
